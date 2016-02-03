@@ -1,0 +1,340 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2EC1212A1C626D550082AB17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC121291C626D550082AB17 /* main.m */; };
+		2EC1212D1C626D550082AB17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1212C1C626D550082AB17 /* AppDelegate.m */; };
+		2EC121301C626D550082AB17 /* EveryDoItAgain.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1212E1C626D550082AB17 /* EveryDoItAgain.xcdatamodeld */; };
+		2EC121331C626D550082AB17 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC121321C626D550082AB17 /* MasterViewController.m */; };
+		2EC121361C626D550082AB17 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC121351C626D550082AB17 /* DetailViewController.m */; };
+		2EC121391C626D550082AB17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EC121371C626D550082AB17 /* Main.storyboard */; };
+		2EC1213B1C626D550082AB17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EC1213A1C626D550082AB17 /* Assets.xcassets */; };
+		2EC1213E1C626D550082AB17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EC1213C1C626D550082AB17 /* LaunchScreen.storyboard */; };
+		2EC121491C626FFE0082AB17 /* ToDo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC121461C626FFE0082AB17 /* ToDo+CoreDataProperties.m */; };
+		2EC1214A1C626FFE0082AB17 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC121481C626FFE0082AB17 /* ToDo.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2EC121251C626D550082AB17 /* EveryDoItAgain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EveryDoItAgain.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EC121291C626D550082AB17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2EC1212B1C626D550082AB17 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2EC1212C1C626D550082AB17 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2EC1212F1C626D550082AB17 /* EveryDoItAgain.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EveryDoItAgain.xcdatamodel; sourceTree = "<group>"; };
+		2EC121311C626D550082AB17 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		2EC121321C626D550082AB17 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		2EC121341C626D550082AB17 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		2EC121351C626D550082AB17 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		2EC121381C626D550082AB17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2EC1213A1C626D550082AB17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2EC1213D1C626D550082AB17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2EC1213F1C626D550082AB17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EC121451C626FFE0082AB17 /* ToDo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ToDo+CoreDataProperties.h"; path = "../ToDo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2EC121461C626FFE0082AB17 /* ToDo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ToDo+CoreDataProperties.m"; path = "../ToDo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2EC121471C626FFE0082AB17 /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDo.h; path = ../ToDo.h; sourceTree = "<group>"; };
+		2EC121481C626FFE0082AB17 /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToDo.m; path = ../ToDo.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2EC121221C626D550082AB17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EC1211C1C626D550082AB17 = {
+			isa = PBXGroup;
+			children = (
+				2EC121271C626D550082AB17 /* EveryDoItAgain */,
+				2EC121261C626D550082AB17 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2EC121261C626D550082AB17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2EC121251C626D550082AB17 /* EveryDoItAgain.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2EC121271C626D550082AB17 /* EveryDoItAgain */ = {
+			isa = PBXGroup;
+			children = (
+				2EC1212B1C626D550082AB17 /* AppDelegate.h */,
+				2EC1212C1C626D550082AB17 /* AppDelegate.m */,
+				2EC121311C626D550082AB17 /* MasterViewController.h */,
+				2EC121321C626D550082AB17 /* MasterViewController.m */,
+				2EC121341C626D550082AB17 /* DetailViewController.h */,
+				2EC121351C626D550082AB17 /* DetailViewController.m */,
+				2EC121471C626FFE0082AB17 /* ToDo.h */,
+				2EC121481C626FFE0082AB17 /* ToDo.m */,
+				2EC121451C626FFE0082AB17 /* ToDo+CoreDataProperties.h */,
+				2EC121461C626FFE0082AB17 /* ToDo+CoreDataProperties.m */,
+				2EC121371C626D550082AB17 /* Main.storyboard */,
+				2EC1213A1C626D550082AB17 /* Assets.xcassets */,
+				2EC1213C1C626D550082AB17 /* LaunchScreen.storyboard */,
+				2EC1213F1C626D550082AB17 /* Info.plist */,
+				2EC1212E1C626D550082AB17 /* EveryDoItAgain.xcdatamodeld */,
+				2EC121281C626D550082AB17 /* Supporting Files */,
+			);
+			path = EveryDoItAgain;
+			sourceTree = "<group>";
+		};
+		2EC121281C626D550082AB17 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2EC121291C626D550082AB17 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2EC121241C626D550082AB17 /* EveryDoItAgain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EC121421C626D550082AB17 /* Build configuration list for PBXNativeTarget "EveryDoItAgain" */;
+			buildPhases = (
+				2EC121211C626D550082AB17 /* Sources */,
+				2EC121221C626D550082AB17 /* Frameworks */,
+				2EC121231C626D550082AB17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EveryDoItAgain;
+			productName = EveryDoItAgain;
+			productReference = 2EC121251C626D550082AB17 /* EveryDoItAgain.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2EC1211D1C626D550082AB17 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Graeme Harrison";
+				TargetAttributes = {
+					2EC121241C626D550082AB17 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 2EC121201C626D550082AB17 /* Build configuration list for PBXProject "EveryDoItAgain" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2EC1211C1C626D550082AB17;
+			productRefGroup = 2EC121261C626D550082AB17 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2EC121241C626D550082AB17 /* EveryDoItAgain */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2EC121231C626D550082AB17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EC1213E1C626D550082AB17 /* LaunchScreen.storyboard in Resources */,
+				2EC1213B1C626D550082AB17 /* Assets.xcassets in Resources */,
+				2EC121391C626D550082AB17 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2EC121211C626D550082AB17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EC1214A1C626FFE0082AB17 /* ToDo.m in Sources */,
+				2EC121361C626D550082AB17 /* DetailViewController.m in Sources */,
+				2EC121331C626D550082AB17 /* MasterViewController.m in Sources */,
+				2EC1212D1C626D550082AB17 /* AppDelegate.m in Sources */,
+				2EC121491C626FFE0082AB17 /* ToDo+CoreDataProperties.m in Sources */,
+				2EC1212A1C626D550082AB17 /* main.m in Sources */,
+				2EC121301C626D550082AB17 /* EveryDoItAgain.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2EC121371C626D550082AB17 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EC121381C626D550082AB17 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2EC1213C1C626D550082AB17 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EC1213D1C626D550082AB17 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2EC121401C626D550082AB17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2EC121411C626D550082AB17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2EC121431C626D550082AB17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EveryDoItAgain/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.graemeharrison.EveryDoItAgain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2EC121441C626D550082AB17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EveryDoItAgain/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.graemeharrison.EveryDoItAgain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2EC121201C626D550082AB17 /* Build configuration list for PBXProject "EveryDoItAgain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EC121401C626D550082AB17 /* Debug */,
+				2EC121411C626D550082AB17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EC121421C626D550082AB17 /* Build configuration list for PBXNativeTarget "EveryDoItAgain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EC121431C626D550082AB17 /* Debug */,
+				2EC121441C626D550082AB17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2EC1212E1C626D550082AB17 /* EveryDoItAgain.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2EC1212F1C626D550082AB17 /* EveryDoItAgain.xcdatamodel */,
+			);
+			currentVersion = 2EC1212F1C626D550082AB17 /* EveryDoItAgain.xcdatamodel */;
+			path = EveryDoItAgain.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2EC1211D1C626D550082AB17 /* Project object */;
+}
