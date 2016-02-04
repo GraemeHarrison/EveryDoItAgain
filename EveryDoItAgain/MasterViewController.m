@@ -8,8 +8,11 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "ToDo.h"
+#import "ToDoTableViewCell.h"
+#import "AppDelegate.h"
 
-@interface MasterViewController ()
+@interface MasterViewController () <DetailViewControllerDelegate>
 
 @end
 
@@ -36,32 +39,37 @@
 }
 
 - (void)insertNewObject:(id)sender {
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-        
-    // If appropriate, configure the new managed object.
-    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-        
-    // Save the context.
-    NSError *error = nil;
-    if (![context save:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
+    [self performSegueWithIdentifier:@"showDetail" sender:nil];
+}
+
+-(void)updateInputInfo:(ToDo *)newToDoObject {
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate saveContext];
+}
+
+-(void)cancelUpdate:(ToDo *)newToDoObject {
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+        [appDelegate.managedObjectContext deleteObject:newToDoObject];
 }
 
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-        [controller setDetailItem:object];
+        DetailViewController *controller = (DetailViewController *)[segue destinationViewController];
+        ToDo *toDo;
+        if (sender != nil) {
+            NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+            toDo = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+            controller.isNewItem = NO;
+        } else {
+            AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+            NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
+            toDo = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:appDelegate.managedObjectContext];
+            controller.isNewItem = YES;
+        }
+        [controller setDetailItem: toDo];
+        controller.delegate = self;
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
     }
@@ -79,7 +87,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    ToDoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ToDoCell" forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
@@ -105,8 +113,12 @@
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    ToDoTableViewCell *toDoCell = (ToDoTableViewCell *) cell;
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    ToDo *toDoObject = (ToDo *) object;
+    toDoCell.titleLabel.text = toDoObject.title;
+    toDoCell.priorityLabel.text = toDoObject.priorityNum;
+    toDoCell.descriptionLabel.text = toDoObject.descript;
 }
 
 #pragma mark - Fetched results controller
@@ -126,7 +138,7 @@
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"priorityNum" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"priorityNum" ascending:YES];
 
     [fetchRequest setSortDescriptors:@[sortDescriptor]];
     

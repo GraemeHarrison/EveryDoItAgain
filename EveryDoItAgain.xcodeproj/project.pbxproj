@@ -17,6 +17,7 @@
 		2EC1213E1C626D550082AB17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EC1213C1C626D550082AB17 /* LaunchScreen.storyboard */; };
 		2EC121491C626FFE0082AB17 /* ToDo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC121461C626FFE0082AB17 /* ToDo+CoreDataProperties.m */; };
 		2EC1214A1C626FFE0082AB17 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC121481C626FFE0082AB17 /* ToDo.m */; };
+		2EC1214D1C627F980082AB17 /* ToDoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1214C1C627F980082AB17 /* ToDoTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		2EC121461C626FFE0082AB17 /* ToDo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ToDo+CoreDataProperties.m"; path = "../ToDo+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2EC121471C626FFE0082AB17 /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDo.h; path = ../ToDo.h; sourceTree = "<group>"; };
 		2EC121481C626FFE0082AB17 /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToDo.m; path = ../ToDo.m; sourceTree = "<group>"; };
+		2EC1214B1C627F980082AB17 /* ToDoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoTableViewCell.h; sourceTree = "<group>"; };
+		2EC1214C1C627F980082AB17 /* ToDoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,8 @@
 				2EC121481C626FFE0082AB17 /* ToDo.m */,
 				2EC121451C626FFE0082AB17 /* ToDo+CoreDataProperties.h */,
 				2EC121461C626FFE0082AB17 /* ToDo+CoreDataProperties.m */,
+				2EC1214B1C627F980082AB17 /* ToDoTableViewCell.h */,
+				2EC1214C1C627F980082AB17 /* ToDoTableViewCell.m */,
 				2EC121371C626D550082AB17 /* Main.storyboard */,
 				2EC1213A1C626D550082AB17 /* Assets.xcassets */,
 				2EC1213C1C626D550082AB17 /* LaunchScreen.storyboard */,
@@ -174,6 +179,7 @@
 				2EC121491C626FFE0082AB17 /* ToDo+CoreDataProperties.m in Sources */,
 				2EC1212A1C626D550082AB17 /* main.m in Sources */,
 				2EC121301C626D550082AB17 /* EveryDoItAgain.xcdatamodeld in Sources */,
+				2EC1214D1C627F980082AB17 /* ToDoTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
